@@ -1,0 +1,1 @@
+In this python course I wish to learn all about python.Writing code in python, making full stack applications from frontend to backend, all important libraries and frameworks.Use of python in AI/ML projects and other important points about python.
