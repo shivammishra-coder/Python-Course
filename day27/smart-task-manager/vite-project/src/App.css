@@ -1,0 +1,120 @@
+/* 1. Global Reset - This is the most important part */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 2. Variables for Light Mode */
+:root {
+  --bg: #f0f2f5;
+  --card-bg: #ffffff;
+  --text: #333;
+  --border: #dddddd;
+}
+
+/* 3. Variables for Dark Mode */
+.dark {
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --text: #ffffff;
+  --border: #333333;
+}
+
+/* 4. The Container - Make sure it covers the full viewport */
+.app-container {
+  min-height: 100vh;
+  width: 100%; /* Force full width */
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 2rem;
+  box-sizing: border-box; /* Prevents horizontal scroll */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 5. The Card */
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid var(--border);
+}
+
+/* 6. Form & Controls - Ensure inputs match the theme */
+.task-form, .controls-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+input, select {
+  padding: 10px;
+  background-color: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+/* 7. Task Item Styling */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  border-left: 5px solid transparent;
+  margin-bottom: 8px;
+}
+
+.strikethrough { text-decoration: line-through; opacity: 0.5; }
+.high { border-left-color: #ff4d4d; }
+.medium { border-left-color: #ffa500; }
+.low { border-left-color: #2ecc71; }
+
+/* 8. Buttons & Filters */
+.filter-group {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-group button {
+  flex: 1;
+  padding: 8px;
+  cursor: pointer;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.filter-group button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: var(--text);
+}
+
+.stats-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
