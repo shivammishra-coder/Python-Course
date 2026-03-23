@@ -22,6 +22,9 @@ A mini-productivity application built with **React + Vite**. This project is a "
   - `useEffect`: Handles synchronization with Browser LocalStorage.
   - `useMemo`: Optimizes performance by memoizing the filtered task list.
   - `useContext`: Manages the global Theme state (Light/Dark mode).
+Image of App:
+<img width="1306" height="912" alt="image" src="https://github.com/user-attachments/assets/e6403166-fe0f-48c3-8ada-0e714fb1bfdd" />
+
 
 ## 📂 Project Structure
 
